@@ -1,0 +1,94 @@
+﻿@model List<AcunMedya.Restaurantly.Entities.Reservation>
+@{
+    ViewBag.Title = "ReservationList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+<!-- row -->
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-title">
+                        <h4>Rezervasyon Listi</h4>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Müşteri Adı</th>
+                                    <th>Müşteri Emaili</th>
+                                    <th>Müşteri Telefon Numarası</th>
+                                    <th>Müşteri Açıklaması</th>
+                                    <th>Müşteri Rezervasyon Tarihi</th>
+                                    <th>Müşteri Saati</th>
+                                    <th>Müşteri Sayısı</th>
+                                    <th>Müşteri Rezervasyon Durumu</th>                              
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.ReservationId</td>
+                                        <td>@item.Name</td>
+                                        <td>@item.Email</td>
+                                        <td>@item.Phone</td>
+                                        <th>@item.Description</th>
+                                        <td>@item.ReservationDate</td>
+                                        <td>@item.Time</td>
+                                        <td>@item.GuestCount</td>
+                                    
+                                        @switch (item.ReservationStatus)
+                                        {
+                                            case "Onaylandı":
+                                                <td style="color:lightgreen" align="center"><b>@item.ReservationStatus</b></td>
+                                                break;
+
+                                            case "Beklemede":
+                                                <td style="color:orange" align="center"><b>@item.ReservationStatus</b></td>
+                                                break;
+
+                                            case "İptal Edildi":
+                                                <td style="color:crimson" align="center"><b>@item.ReservationStatus</b></td>
+                                                break;
+
+                                            default:
+                                                <td align="center"><b>@item.ReservationStatus</b></td>
+                                                break;
+
+
+                                        }
+
+                                        <td align="center" class="px-10 py-2">
+
+                                            <a href="/Reservation/ReservationOnayla/@item.ReservationId" class="btn btn-check gradient-1 row-cols-2 mb-2 ">Onayla</a>
+                                             <br />                              
+                                             <a href="/Reservation/ReservationBekleme/@item.ReservationId" class="btn btn-check gradient-4 row-cols-2 mb-2">Beklemeye Al</a>
+                                             <br />                                           
+                                            <a href="/Reservation/ReservationRed/@item.ReservationId" class="btn btn-check gradient-7 row-cols-2 mb-2 ">İptal Et</a>
+                                      </td>
+                                        <td><a href="/Reservation/ReservationDelete/@item.ReservationId" class="btn btn-danger"><i class="fa fa-close color-muted m-r-5"></i>Sil</a></td>
+
+                                        <td><a href="/Reservation/ReservationEdit/@item.ReservationId" class="btn btn-info gradient-2"><i class="fa fa-edit color-muted m-r-5"></i>Güncelle</a></td>
+                                        
+                                        
+                                    </tr>
+                                }
+
+                            </tbody>
+                        </table>
+                        <a href="/Reservation/ReservationCreate" class="btn btn-success">Rezervasyon Ekle</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /# column -->
+    </div>
+</div>
+

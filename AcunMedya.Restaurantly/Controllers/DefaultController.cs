@@ -105,5 +105,20 @@ namespace AcunMedya.Restaurantly.Controllers
             ViewBag.Call = db.Adress.Select(x => x.Call).FirstOrDefault();
             return PartialView();
         }
+        public PartialViewResult PartialGallery()
+        {
+            var value = db.Gallerys.ToList();
+            return PartialView(value);
+        }
+        public PartialViewResult PartialEvent()
+        {
+            var value = db.Events.ToList();
+            return PartialView(value);
+        }
+        public PartialViewResult PartialFooter()
+        {
+            return PartialView();
+        }
+
     }
 }

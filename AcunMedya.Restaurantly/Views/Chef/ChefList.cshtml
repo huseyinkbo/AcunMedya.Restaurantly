@@ -1,0 +1,52 @@
+﻿@model List<AcunMedya.Restaurantly.Entities.Chef>
+@{
+    ViewBag.Title = "ChefList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-title">
+                        <h4>Şef Listi</h4>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>İsmi</th>
+                                    <th>Ünvanı</th>
+                                    <th>Resmi</th>                                  
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <th>@item.ChefId</th>
+                                        <td>@item.ChefName</td>
+                                        <td>@item.Title</td>
+                                        <td><img src="@item.ImageUrl" style="width:100px; height:100px" /></td>
+                                        <td>
+                                        </td>
+                                        <td><a href="/Chef/ChefDelete/@item.ChefId" class="btn btn-danger"><i class= "fa fa-close color-muted m-r-5"></i>Sil</a></td>
+                                        <td><a href="/Chef/ChefEdit/@item.ChefId" class="btn btn-info gradient-7"><i class="fa fa-edit color-muted m-r-5"></i> Güncelle</a></td>
+                                    </tr>
+                                }
+
+                            </tbody>
+                        </table>
+                        <a href="/Chef/ChefCreate" class="btn btn-success">Şef Ekle</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /# column -->
+    </div>
+</div>
+
+
+

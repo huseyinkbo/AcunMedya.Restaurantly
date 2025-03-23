@@ -441,12 +441,12 @@ h1, h2, h3, h4, h5, h6 {
 # Hero Section
 --------------------------------------------------------------*/
 #hero {
-  width: 100%;
-  height: 100vh;
-  background: url("../img/hero-bg.jpg") top center;
-  background-size: cover;
-  position: relative;
-  padding: 0;
+    width: 100%;
+    height: 100vh;
+    background: /*url("~/Template/Restaurantly/assets/img/hero-bg.jpg") top center;*/ url("https://c0.wallpaperflare.com/path/505/441/208/restaurant-night-photograph-historically-architecture-67c79254cf16f25105c86079456aec2b.jpg") top center;
+    background-size: cover;
+    position: relative;
+    padding: 0;
 }
 
 #hero:before {
@@ -743,10 +743,10 @@ section {
 # About
 --------------------------------------------------------------*/
 .about {
-  background: url("../img/about-bg.jpg") center center;
-  background-size: cover;
-  position: relative;
-  padding: 80px 0;
+    background: url("https://c1.wallpaperflare.com/path/200/54/428/christmas-dinner-christmas-xmas-christmas-table-e7b442e67fc95ae13458077a0914d0b8.jpg") center center;
+    background-size: cover;
+    position: relative;
+    padding: 80px 0;
 }
 
 .about:before {
@@ -885,6 +885,27 @@ section {
 /*--------------------------------------------------------------
 # Menu Section
 --------------------------------------------------------------*/
+.menu {
+    background: url("https://c0.wallpaperflare.com/path/452/100/984/restaurant-bar-coffee-shop-472712341f36c2a11558b099754a9c9b.jpg") center center;
+    background-size: cover;
+    position: relative;
+}
+
+    .menu::before {
+        content: '';
+        background-color: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+    }
+
+@media (min-width: 1024px) {
+    .menu {
+        background-attachment: fixed;
+    }
+}
 .menu #menu-flters {
   padding: 0;
   margin: 0 auto 0 auto;
@@ -935,7 +956,9 @@ section {
 }
 
 .menu .menu-content::after {
-  content: "......................................................................" "...................................................................." "....................................................................";
+  content: "......................................................................"
+ "...................................................................."
+ "....................................................................";
   position: absolute;
   left: 20px;
   right: 0;
@@ -1043,9 +1066,9 @@ section {
 # Events
 --------------------------------------------------------------*/
 .events {
-  background: url(../img/events-bg.jpg) center center no-repeat;
-  background-size: cover;
-  position: relative;
+    background: url(https://img.freepik.com/free-photo/luxury-dining-candlelit-table-elegant-decor-exquisite-food-wine-generated-by-artificial-intelligence_188544-127348.jpg?t=st=1742327963~exp=1742331563~hmac=fae4620be4200f89bd76431f8f04f77cd19dc96d82728bbdcb6eb440e719e373&w=1060) center center no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
 .events::before {
@@ -1242,6 +1265,35 @@ section {
 /*--------------------------------------------------------------
 # Testimonials
 --------------------------------------------------------------*/
+#testimonials {
+    width: 100%;
+    height: 100vh;
+    background: url("https://images.pexels.com/photos/2313037/pexels-photo-2313037.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") center center;
+    background-size: cover;
+    position: relative;
+    padding: 0;
+}
+
+    #testimonials:before {
+        content: "";
+        background: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+    #testimonials .container {
+        padding-top: 110px;
+    }
+
+@media (max-width: 750px) {
+    #testimonials .container {
+        padding-top: 98px;
+    }
+}
+
 .testimonials .testimonial-item {
   box-sizing: content-box;
   min-height: 320px;
@@ -1328,7 +1380,7 @@ section {
 }
 
 .gallery .gallery-item:hover img {
-  transform: scale(1.1);
+  transform: scale(1.3);
 }
 
 /*--------------------------------------------------------------

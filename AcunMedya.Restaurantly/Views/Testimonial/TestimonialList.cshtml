@@ -1,0 +1,57 @@
+﻿@model List<AcunMedya.Restaurantly.Entities.Testimonial>
+@{
+    ViewBag.Title = "TestimonialList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<!-- row -->
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-title">
+                        <h4>Referans Listi</h4>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Referans Adı</th>
+                                    <th>Referans Ünvanı</th>
+                                    <th>Referans Açıklaması</th>
+                                    <th>Referans Resmi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <th>@item.TestimonialId</th>
+                                        <td>@item.Name</td>
+                                        <td>@item.Title</td>
+                                        <td>@item.Description</td>
+                                        <td><img src="@item.ImageUrl" style="width:100px; height:100px"/></td>
+                                        <td>
+                                        </td>
+                                        <td><a href="/Testimonial/TestimonialDelete/@item.TestimonialId" class="btn btn-danger"><i class= "fa fa-close color-muted m-r-5"></i>Sil</a></td>
+                                        <td><a href="/Testimonial/TestimonialEdit/@item.TestimonialId" class="btn btn-info gradient-7"><i class="fa fa-edit color-muted m-r-5"></i> Güncelle</a></td>
+                                    </tr>
+                                }
+
+                            </tbody>
+                        </table>
+                        <a href="/Testimonial/TestimonialCreate" class="btn btn-success">Referans Ekle</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /# column -->
+    </div>
+</div>
+
+
+

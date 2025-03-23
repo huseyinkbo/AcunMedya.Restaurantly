@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewBag.Title = "ReservationCreate";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="row page-titles mx-0">
+    <div class="col p-md-0">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Anasayfa</a></li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">Rezervasyon Ekleme</a></li>
+        </ol>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Rezervasyon Ekleme Formu</h4>
+                <div class="basic-form">
+                    <form method="post">
+
+                        <div class="form-group">
+                            <label>Müşteri İsmi</label>
+                            <input type="text" class="form-control" name="Name" placeholder="Müşteri İsmi Giriniz">
+
+                            <label>Müşteri Emaili</label>
+                            <input type="text" class="form-control" name="Email" placeholder="Kategori İsmi Giriniz">
+
+                            <label>Müşteri Telefonu</label>
+                            <input type="text" class="form-control" name="Phone" placeholder="Kategori İsmi Giriniz">
+
+                            <label>Müşteri Açıklaması</label>
+                            <input type="text" class="form-control" name="Description" placeholder="Kategori İsmi Giriniz">
+
+                            <label>Müşteri Rezervasyon Tarihi</label>
+                            <input type="text" class="form-control" name="ReservationDate" placeholder="Kategori İsmi Giriniz">
+
+                            <label>Rezervasyon Saati</label>
+                            <input type="text" class="form-control" name="Time" placeholder="Kategori İsmi Giriniz">
+
+                            <label>Müşteri Sayısı</label>
+                            <input type="text" class="form-control" name="GuestCount" placeholder="Kategori İsmi Giriniz">
+
+                            <label>Rezervasyon Durumu</label>
+                            <input type="text" class="form-control" name="ReservationStatus" placeholder="Kategori İsmi Giriniz">
+                          
+                        </div>
+
+
+                        <button type="submit" class="btn btn-dark gradient-2">Kategori Ekle</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

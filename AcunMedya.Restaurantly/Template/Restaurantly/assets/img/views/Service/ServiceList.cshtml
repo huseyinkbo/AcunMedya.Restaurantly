@@ -1,0 +1,51 @@
+﻿@model List<AcunMedya.Restaurantly.Entities.Service>
+@{
+    ViewBag.Title = "ServiceList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<!-- row -->
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-title">
+                        <h4>Servis Listi</h4>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Servis ID</th>
+                                    <th>Servis Adı</th>
+                                    <th>Servis Açıklaması</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <th>@item.ServiceId</th>
+                                        <td>@item.Title</td>
+                                        <td>@item.Description</td>
+                                        <td>
+                                        </td>
+                                        <td><a href="/Service/ServiceDelete/@item.ServiceId" class="btn btn-danger"><i class= "fa fa-close color-muted m-r-5"></i>Sil</a></td>
+                                        <td><a href="/Service/ServiceEdit/@item.ServiceId" class="btn btn-info gradient-7"><i class="fa fa-edit color-muted m-r-5"></i> Güncelle</a></td>
+                                    </tr>
+                                }
+
+                            </tbody>
+                        </table>
+                        <a href="/Service/ServiceCreate" class="btn btn-success">Kategori Ekle</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /# column -->
+    </div>
+</div>
+

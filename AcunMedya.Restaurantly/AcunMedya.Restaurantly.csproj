@@ -204,6 +204,10 @@
     <Compile Include="Migrations\202503160843005_mig9.Designer.cs">
       <DependentUpon>202503160843005_mig9.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202503242023484_mig10.cs" />
+    <Compile Include="Migrations\202503242023484_mig10.Designer.cs">
+      <DependentUpon>202503242023484_mig10.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -227,7 +231,6 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="obj\Release\Package\PackageTmp\Template\Restaurantly\assets\img\event-birthday.jpg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -731,6 +734,7 @@
     <Content Include="Template\quixlab-master\js\custom.min.js" />
     <Content Include="Template\quixlab-master\js\dashboard\dashboard-1.js" />
     <Content Include="Template\quixlab-master\js\gleek.js" />
+    <Content Include="Template\quixlab-master\js\logo-text.png" />
     <Content Include="Template\quixlab-master\js\plugins-init\amchart-init.js" />
     <Content Include="Template\quixlab-master\js\plugins-init\block-ui-init.js" />
     <Content Include="Template\quixlab-master\js\plugins-init\bootstrap-duallistbox-init.js" />
@@ -5356,37 +5360,6 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Category\Index.cshtml" />
-    <Content Include="Template\Restaurantly\assets\vendor\bootstrap-icons\bootstrap-icons.json" />
-    <Content Include="Template\Restaurantly\assets\vendor\bootstrap-icons\fonts\bootstrap-icons.woff" />
-    <Content Include="Template\Restaurantly\assets\vendor\bootstrap-icons\fonts\bootstrap-icons.woff2" />
-    <Content Include="Template\Restaurantly\assets\vendor\bootstrap\css\bootstrap-grid.css.map" />
-    <Content Include="Template\Restaurantly\assets\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
-    <Content Include="Template\Restaurantly\assets\vendor\bootstrap\css\bootstrap-grid.rtl.css.map" />
-    <Content Include="Template\Restaurantly\assets\vendor\bootstrap\css\bootstrap-grid.rtl.min.css.map" />
-    <Content Include="Template\Restaurantly\assets\vendor\bootstrap\css\bootstrap-reboot.css.map" />
-    <Content Include="Template\Restaurantly\assets\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
-    <Content Include="Template\Restaurantly\assets\vendor\bootstrap\css\bootstrap-reboot.rtl.css.map" />
-    <Content Include="Template\Restaurantly\assets\vendor\bootstrap\css\bootstrap-reboot.rtl.min.css.map" />
-    <Content Include="Template\Restaurantly\assets\vendor\bootstrap\css\bootstrap-utilities.css.map" />
-    <Content Include="Template\Restaurantly\assets\vendor\bootstrap\css\bootstrap-utilities.min.css.map" />
-    <Content Include="Template\Restaurantly\assets\vendor\bootstrap\css\bootstrap-utilities.rtl.css.map" />
-    <Content Include="Template\Restaurantly\assets\vendor\bootstrap\css\bootstrap-utilities.rtl.min.css.map" />
-    <Content Include="Template\Restaurantly\assets\vendor\bootstrap\css\bootstrap.css.map" />
-    <Content Include="Template\Restaurantly\assets\vendor\bootstrap\css\bootstrap.min.css.map" />
-    <Content Include="Template\Restaurantly\assets\vendor\bootstrap\css\bootstrap.rtl.css.map" />
-    <Content Include="Template\Restaurantly\assets\vendor\bootstrap\css\bootstrap.rtl.min.css.map" />
-    <Content Include="Template\Restaurantly\assets\vendor\bootstrap\js\bootstrap.bundle.js.map" />
-    <Content Include="Template\Restaurantly\assets\vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
-    <Content Include="Template\Restaurantly\assets\vendor\bootstrap\js\bootstrap.esm.js.map" />
-    <Content Include="Template\Restaurantly\assets\vendor\bootstrap\js\bootstrap.esm.min.js.map" />
-    <Content Include="Template\Restaurantly\assets\vendor\bootstrap\js\bootstrap.js.map" />
-    <Content Include="Template\Restaurantly\assets\vendor\bootstrap\js\bootstrap.min.js.map" />
-    <Content Include="Template\Restaurantly\assets\vendor\boxicons\fonts\boxicons.eot" />
-    <Content Include="Template\Restaurantly\assets\vendor\boxicons\fonts\boxicons.ttf" />
-    <Content Include="Template\Restaurantly\assets\vendor\boxicons\fonts\boxicons.woff" />
-    <Content Include="Template\Restaurantly\assets\vendor\boxicons\fonts\boxicons.woff2" />
-    <Content Include="Template\Restaurantly\forms\book-a-table.php" />
-    <Content Include="Template\Restaurantly\forms\contact.php" />
     <Content Include="Views\Default\Index.cshtml" />
     <Content Include="Views\Default\PartialHead.cshtml" />
     <Content Include="Views\Default\PartialTop.cshtml" />
@@ -5789,6 +5762,9 @@
     <Content Include="Views\Gallery\GalleryCreate.cshtml" />
     <Content Include="Views\Gallery\GalleryEdit.cshtml" />
     <Content Include="Views\Notification\NotificationList.cshtml" />
+    <Content Include="Views\Dashboard\TestimonialPartial.cshtml" />
+    <Content Include="Views\Statistic\Index.cshtml" />
+    <Content Include="Template\Restaurantly\assets\img\gallery\GalleryCreate.cshtml" />
     <Content Include="Template\Restaurantly\assets\img\views\About\AboutCreate.cshtml" />
     <Content Include="Template\Restaurantly\assets\img\views\About\AboutEdit.cshtml" />
     <Content Include="Template\Restaurantly\assets\img\views\About\AboutList.cshtml" />
@@ -5861,14 +5837,43 @@
     <Content Include="Template\Restaurantly\assets\img\views\Testimonial\TestimonialList.cshtml" />
     <Content Include="Template\Restaurantly\assets\img\views\Web.config" />
     <Content Include="Template\Restaurantly\assets\img\views\_ViewStart.cshtml" />
-    <Content Include="Template\Restaurantly\assets\img\gallery\GalleryCreate.cshtml" />
-    <Content Include="Views\Dashboard\TestimonialPartial.cshtml" />
-    <Content Include="Views\Statistic\Index.cshtml" />
+    <Content Include="Template\Restaurantly\assets\vendor\bootstrap-icons\bootstrap-icons.json" />
+    <Content Include="Template\Restaurantly\assets\vendor\bootstrap-icons\fonts\bootstrap-icons.woff" />
+    <Content Include="Template\Restaurantly\assets\vendor\bootstrap-icons\fonts\bootstrap-icons.woff2" />
+    <Content Include="Template\Restaurantly\assets\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="Template\Restaurantly\assets\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="Template\Restaurantly\assets\vendor\bootstrap\css\bootstrap-grid.rtl.css.map" />
+    <Content Include="Template\Restaurantly\assets\vendor\bootstrap\css\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Template\Restaurantly\assets\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="Template\Restaurantly\assets\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Template\Restaurantly\assets\vendor\bootstrap\css\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Template\Restaurantly\assets\vendor\bootstrap\css\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Template\Restaurantly\assets\vendor\bootstrap\css\bootstrap-utilities.css.map" />
+    <Content Include="Template\Restaurantly\assets\vendor\bootstrap\css\bootstrap-utilities.min.css.map" />
+    <Content Include="Template\Restaurantly\assets\vendor\bootstrap\css\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Template\Restaurantly\assets\vendor\bootstrap\css\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Template\Restaurantly\assets\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Template\Restaurantly\assets\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Template\Restaurantly\assets\vendor\bootstrap\css\bootstrap.rtl.css.map" />
+    <Content Include="Template\Restaurantly\assets\vendor\bootstrap\css\bootstrap.rtl.min.css.map" />
+    <Content Include="Template\Restaurantly\assets\vendor\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="Template\Restaurantly\assets\vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Template\Restaurantly\assets\vendor\bootstrap\js\bootstrap.esm.js.map" />
+    <Content Include="Template\Restaurantly\assets\vendor\bootstrap\js\bootstrap.esm.min.js.map" />
+    <Content Include="Template\Restaurantly\assets\vendor\bootstrap\js\bootstrap.js.map" />
+    <Content Include="Template\Restaurantly\assets\vendor\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="Template\Restaurantly\assets\vendor\boxicons\fonts\boxicons.eot" />
+    <Content Include="Template\Restaurantly\assets\vendor\boxicons\fonts\boxicons.ttf" />
+    <Content Include="Template\Restaurantly\assets\vendor\boxicons\fonts\boxicons.woff" />
+    <Content Include="Template\Restaurantly\assets\vendor\boxicons\fonts\boxicons.woff2" />
+    <Content Include="Template\Restaurantly\forms\book-a-table.php" />
+    <Content Include="Template\Restaurantly\forms\contact.php" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="images\" />
     <Folder Include="Models\" />
+    <Folder Include="obj\Release\Package\PackageTmp\Template\Restaurantly\assets\img\" />
     <Folder Include="Views\Event\" />
   </ItemGroup>
   <ItemGroup>
@@ -5925,6 +5930,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202503160843005_mig9.resx">
       <DependentUpon>202503160843005_mig9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202503242023484_mig10.resx">
+      <DependentUpon>202503242023484_mig10.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

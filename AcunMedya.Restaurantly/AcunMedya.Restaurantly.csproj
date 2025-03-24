@@ -237,23 +237,7 @@
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Default\default\Index.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Default\default\PartialAbout.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Default\default\PartialAdress.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Default\default\PartialBookaTable.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Default\default\PartialChefs.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Default\default\PartialContact.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Default\default\PartialEvent.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Default\default\PartialFeature.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Default\default\PartialFooter.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Default\default\PartialGallery.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Default\default\PartialHead.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Default\default\PartialMenu.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Default\default\PartialNavbar.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Default\default\PartialService.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Default\default\PartialSpecials.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Default\default\PartialTestimonial.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Default\default\PartialTop.cshtml" />
+    <None Include="Properties\PublishProfiles\AcunmedyaRestaurantlyBayraktar.pubxml" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
@@ -5874,6 +5858,7 @@
     <Folder Include="images\" />
     <Folder Include="Models\" />
     <Folder Include="obj\Release\Package\PackageTmp\Template\Restaurantly\assets\img\" />
+    <Folder Include="obj\Release\Package\PackageTmp\Views\Default\default\" />
     <Folder Include="Views\Event\" />
   </ItemGroup>
   <ItemGroup>
